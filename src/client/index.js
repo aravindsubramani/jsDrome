@@ -2,8 +2,21 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 class App extends Component {
-  render() {
-    return <h1>Hello, World</h1>;
+  state = {
+    count: 5,  
+  };
+   decrement = () => {
+     const currentValue = this.state.count;
+
+     this.setState({
+       count: currentValue - 1,
+     });
+   }
+  render() {  
+    return <div>
+      <h1>{this.state.count}</h1>
+      <button onClick={this.decrement}>-</button>
+      </div>;
   }
 }
 
