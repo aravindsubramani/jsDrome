@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 
 class App extends Component {
   state = {
-    count: 5,  
+    count: 5,
   };
    decrement = () => {
      const currentValue = this.state.count;
@@ -12,7 +12,7 @@ class App extends Component {
        count: currentValue - 1,
      });
    }
-  render() {  
+  render() {
     return <div>
       <h1>{this.state.count}</h1>
       <button onClick={this.decrement}>-</button>
